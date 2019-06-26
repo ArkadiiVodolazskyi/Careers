@@ -1,0 +1,124 @@
+@media (max-width: 1370px) {
+  .statistics,
+  .job-list,
+  div.pages,
+  .candidates,
+  .signup,
+  footer {
+    padding: 30px 7% !important;
+  }
+  .banner header a.contact {
+    margin-left: auto;
+  }
+  .banner header ul.nav {
+    position: absolute;
+    right: -200px;
+    top: 0px;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 100vh;
+    background-color: #1644ba;
+    opacity: 0.8;
+  }
+  .banner header ul.nav > li > a {
+    opacity: 1;
+  }
+  .banner header ul.nav.active {
+    right: 0;
+  }
+  .banner header ul.nav.active > li:not(.hamburger) {
+    display: block;
+  }
+  .banner header ul.nav.active > li.hamburger {
+    display: none;
+  }
+  .banner header ul.nav > li:not(.hamburger) {
+    display: none;
+  }
+  .banner header ul.nav > li.hamburger {
+    display: block;
+    position: absolute;
+    left: -110px;
+    top: 10px;
+  }
+  .banner .main .wrap-search input[type="text"] {
+    flex-grow: 2;
+  }
+  .banner .main .wrap-search a.search {
+    flex-grow: 2;
+  }
+  .banner .main .wrap-search select[name="City"] {
+    flex-grow: 1;
+  }
+  .banner .main .wrap-search select[name="Time"] {
+    flex-grow: 1;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+  .main,
+  .statistics,
+  .job-list,
+  div.pages,
+  .candidates,
+  .signup,
+  footer {
+    padding: 40px 5% !important;
+  }
+  .banner .main .wrap-search {
+    width: 70%;
+    flex-wrap: wrap;
+  }
+  .banner .main .wrap-search input[type="text"],
+  .banner .main .wrap-search select[name="City"],
+  .banner .main .wrap-search select[name="Time"],
+  .banner .main .wrap-search a.search {
+    width: 45% ;
+    margin: 5px;
+  }
+  .banner .main .wrap-search input[type="text"] {
+    order: 1;
+  }
+  .banner .main .wrap-search a.search {
+    order: 2;
+  }
+  .banner .main .wrap-search select[name="City"] {
+    order: 3;
+  }
+  .banner .main .wrap-search select[name="Time"] {
+    order: 4;
+  }
+  ul.facts {
+    width: 70%;
+  }
+  .reviews .review {
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+  .main,
+  .statistics,
+  .job-list,
+  div.pages,
+  .candidates,
+  .signup,
+  footer {
+    padding: 20px 5% !important;
+  }
+  .banner .main .wrap-search input[type="text"],
+  .banner .main .wrap-search select[name="City"],
+  .banner .main .wrap-search select[name="Time"],
+  .banner .main .wrap-search a.search {
+    width: 80%;
+  }
+  .reviews .review {
+    width: 80%;
+  }
+}

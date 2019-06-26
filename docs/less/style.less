@@ -1,0 +1,572 @@
+// out: ../css/
+
+// Basic styles .........................
+
+html {
+    font-size: 16px;
+}
+
+body {
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+// General styles ..........................
+
+a {
+    transition: all 0.3s ease;
+}
+
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #000;
+    z-index: 10;
+    cursor: pointer;
+
+    &.active {
+        opacity: 0.7;
+        visibility: visible;
+    }
+}
+
+// Banner styles ..........................
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-image: url("../img/hero_1.jpg");
+    background-position: center;
+    background-size: cover;
+
+    overflow: hidden;
+
+    header {
+        height: 10vh;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        padding: 5px 20%;
+
+        ul.nav {
+            font-size: 1.2rem;
+            z-index: 200;
+
+            * {
+                z-index: 200;
+            }
+
+            li {
+                display: inline-block;
+                margin: 10px;
+
+                &.close,
+                &.hamburger {
+                    display: none;
+                    font-size: 1.3rem;
+                }
+
+                a {
+                    padding: 0 10px;
+                    opacity: 0.5;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        a.contact {
+            text-align: center;
+            padding: 10px 15px;
+            background-color: #1644ba;
+            border-radius: 6px;
+            font-size: 1rem;
+
+            white-space: nowrap;
+
+            &:hover {
+                background-color: #3468ebc7;
+            }
+        }
+    }
+
+    // Search field .............................
+    .main {
+        height: 90vh;
+        padding: 0 8%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        text-align: center;
+        font-size: 1.1rem;
+
+        span {
+            margin-top: 10px;
+            margin-bottom: 20px;
+
+            opacity: 0.7;
+        }
+        .wrap-search {
+            width: 80%;
+
+            display: flex;
+            justify-content: center;
+            align-self: center;
+
+            input[type="text"],
+            select[name="City"],
+            select[name="Time"],
+            a.search {
+                flex-grow: 1;
+                display: inline-block;
+                margin: 0 5px;
+                padding: 10px;
+
+                font-size: 1rem;
+                box-sizing: border-box;
+                border-radius: 5px;
+            }
+
+            a.search {
+                min-width: 125px;
+                padding: 10px 12px;
+                background-color: #1644ba;
+                border-radius: 4px;
+                vertical-align: middle;
+
+                &:hover {
+                    background-color: #3468ebc7;
+                }
+            }
+        }
+    }
+
+    // Careers Statistics .............................
+    .statistics {
+        padding: 40px 20%;
+        text-align: center;
+        background-color: rgba(22,68,186, 0.7);
+        font-size: 1.2rem;
+
+        p {
+            margin-top: 15px;
+            margin-bottom: 40px;
+
+            text-transform: none;
+        }
+        ul.facts {
+            display: flex;
+            justify-content: space-around;
+            align-self: center;
+            margin: 0 auto;
+
+            li {
+                margin: 15px 0;
+                text-align: center;
+
+                h3 {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+// Job List styles .............................
+
+.job-list {
+    padding: 40px 20%;
+
+    text-align: center;
+    font-size: 1.2rem;
+    
+    & * {
+        color: #000;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .wrap-jobs {
+        margin: 0 auto;
+        
+
+        .job {
+            padding: 25px 0;
+
+            border-bottom: 1px solid #ddd;
+
+            & > * {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .wrap-logo {
+                width: 15%;
+                text-align: center;
+
+                img.logo {
+                    max-width: 80px;
+                    max-height: 80px;
+                }
+            }
+
+            .info {
+                width: 45%;
+                text-align: left;
+
+                .job-type {
+                    padding: 3px 5px;
+                    border-radius: 5px;
+                    opacity: 0.8;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    &.freelancer {
+                        background-color: #1644ba;
+                        color: #fff;
+                    }
+
+                    &.full-time {
+                        background-color: #fff568;
+                    }
+
+                    &.part-time {
+                        background-color: #28a745;
+                        color: #fff;
+                    }
+                }
+                h3 {
+                    margin: 7px 0;
+
+                    .job-title {
+                        font-size: 1rem;
+                        color: #1644ba;
+                        cursor: pointer;
+    
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .publisher {
+
+                    span {
+                        color: #b5b5b5;
+                    }
+                    a.name,
+                    a.branch {
+                        font-weight: bold;
+
+                        &:hover {
+                            color: #1644ba;
+                        }
+                    }
+                }
+            }
+
+            .place {
+                width: 15%;
+
+                .city {
+                    margin-bottom: 5px;
+                    font-size: 1.1rem;
+                }
+                .country {
+                    color: #b5b5b5;
+                }
+            }
+
+            .salary {
+                width: 20%;
+                text-align: right;
+            }
+        }
+    }
+
+    // Pages styles .............................
+
+    div.pages {
+        padding: 40px 20%;
+        text-align: center;
+
+        border-bottom: 1px solid #ddd;
+
+        & * {
+            display: inline-block;
+            margin: 0 5px;
+            color: #1644ba;
+        }
+
+        a {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+
+            transition: all 0.2s ease;
+
+            &:hover {
+                background-color: #1644ba;
+                color: #fff;
+            }
+        }
+        ul.pages {
+
+            li {
+
+                a {
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    border-radius: 100%;
+
+                    &.current {
+                        background-color: #1644ba;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Candidates styles .............................
+
+.candidates {
+    margin: 0 auto;
+    padding: 40px 20%;
+    text-align: center;
+
+    & * {
+        color: #000;
+    }
+
+    p {
+        margin: 15px;
+        text-transform: none;
+    }
+    .wrap-companies {
+
+        img.logo {
+            width: 15%;
+            min-width: 110px;
+
+            margin: 0 20px;
+            display: inline-block;
+
+            vertical-align: middle;
+        }
+    }
+}
+
+// Reviews styles .............................
+
+.reviews {
+    min-height: 550px;
+    padding: 40px 0;
+
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.2rem;
+    
+    & * {
+        color: #000;
+        text-transform: none;
+    }
+
+    .review {
+        width: 30%;
+        margin: 0 auto;
+        text-align: center;
+        font-style: italic;
+
+        display: inline-block;
+        position: absolute;
+        transition: all 0.7s ease;
+        transform: translateX(120%);
+        opacity: 0;
+        visibility: hidden;
+
+        &.active {
+            position: relative;
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        img.photo {
+            max-height: 300px;
+            border-radius: 100%;
+        }
+        blockquote {
+            
+            p.text {
+                margin: 20px 0;
+                color: #777;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .btns {
+        margin: 0 auto;
+        text-align: center;
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+
+        a.dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+
+            margin: 10px;
+
+            background-color: #777;
+            border-radius: 100%;
+
+            &.active {
+                background-color: #1644ba;
+            }
+        }
+    }
+}
+
+// SignUp Styles
+
+.signup {
+    background-color: #1644ba;
+    padding: 50px 20%;
+
+    font-size: 0;
+
+    .wrap-text {
+        width: 60%;
+        display: inline-block;
+
+        font-size: 1.1rem;
+        vertical-align: middle;
+
+        h2 {
+            margin-bottom: 15px;
+        }
+    }
+    
+    .wrap-btn {
+        width: 40%;
+        display: inline-block;
+
+        font-size: 1.1rem;
+        vertical-align: middle;
+        text-align: right;
+
+        a.signup-btn {
+            box-sizing: border-box;
+            padding: 15px 50px;
+            border-radius: 5px;
+            background-color: #fff568;
+            color: #000;
+            font-size: 1.2rem;
+
+            &:hover {
+                background-color: #fff9a1;
+            }
+        }
+    }
+}
+
+// Footer styles
+
+footer {
+    padding: 50px 20%;
+    padding-bottom: 20px;
+    background-color: #242424;
+
+    font-size: 1.1rem;
+
+    .wrap-blocks {
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin: 20px 0;
+            
+            > a {
+                opacity: 0.6;
+            }
+        }
+
+        a {
+            &.icon-social {
+                display: inline-block;
+                margin: 5px;
+                padding: 10px;
+                width: 35px;
+                height: 35px;
+                background-color: #1644ba;
+                border-radius: 100%;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #1644ba;
+                }
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 20px;
+        text-align: center;
+
+        .design {
+            color: #1644ba;
+
+            &:hover {
+                color: lighten(#1644ba, 30%);
+            }
+        }
+
+        .code {
+            color: #fff568;
+
+            &:hover {
+                color: lighten(#fff568, 10%);
+            }
+        }
+    }
+}
+
