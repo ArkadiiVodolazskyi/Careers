@@ -1,152 +1,174 @@
 // out: ../css/
 
 @media (max-width: 1370px) {
-
-    
-    .statistics, .job-list,
-    div.pages, .candidates,
-    .signup, footer {
-        padding: 30px 7% !important;
+  .banner header {
+    a.contact {
+      margin-left: auto;
     }
 
-    .banner header {
+    ul.nav {
+      position: absolute;
+      right: -200px;
+      top: 0px;
 
-        a.contact {
-            margin-left: auto;
+      transition: all 0.5s ease;
+
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      padding: 15px;
+      height: 100vh;
+      background-color: #1644ba;
+      opacity: 0.8;
+
+      > li > a {
+        opacity: 1;
+      }
+
+      &.active {
+        right: 0;
+
+        > li:not(.hamburger) {
+          display: block;
         }
-
-        ul.nav {
-            position: absolute;
-            right: -200px;
-            top: 0px;
-
-            transition: all 0.5s ease;
-
-            display: flex;
-            flex-direction: column;
-            width: 150px;
-            height: 100vh;
-            background-color: #1644ba;
-            opacity: 0.8;
-
-            > li > a {
-                opacity: 1;
-            }
-
-            &.active {
-                right: 0;
-
-                >li:not(.hamburger) {
-                    display: block;
-                }
-                > li.hamburger {
-                    display: none;
-                }
-            }
-
-            > li:not(.hamburger) {
-                display: none;
-            }
-
-            > li.hamburger {
-                display: block;
-                position: absolute;
-                left: -110px;
-                top: 10px;
-            }
+        > li.hamburger {
+          display: none;
         }
+      }
+
+      > li:not(.hamburger) {
+        display: none;
+      }
+
+      > li.hamburger {
+        display: block;
+        position: absolute;
+        right: 230px;
+        top: 25px;
+      }
     }
+  }
 
-    .banner .main .wrap-search {
+  .job-list {
+    width: auto;
+  }
 
-        input[type="text"] {
-            flex-grow: 2;
-        }
-        a.search {
-            flex-grow: 2;
-        }
-        select[name="City"] {
-            flex-grow: 1;
-        }
-        select[name="Time"] {
-            flex-grow: 1;
-        }
-    }
-
+  footer .wrapper {
+    width: auto;
+    justify-content: center;
+  }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
+  html {
+    font-size: 14px;
+  }
 
-    html {
-        font-size: 14px;
+  .wrapper {
+    width: 90%;
+  }
+
+  .banner .main .wrap-search {
+    width: 70%;
+    flex-wrap: wrap;
+
+    input[type="text"],
+    select[name="City"],
+    select[name="Time"],
+    a.search {
+      width: 45%;
+      margin: 5px;
     }
-
-    .main,
-    .statistics, .job-list,
-    div.pages, .candidates,
-    .signup, footer {
-        padding: 40px 5% !important;
-    }
-
-    .banner .main .wrap-search {
-        width: 70%;
-        flex-wrap: wrap;
-
-        input[type="text"],
-        select[name="City"],
-        select[name="Time"],
-        a.search {
-            width: 45% ;
-            margin: 5px;
-        }
-        input[type="text"] {
-            order: 1;
-        }
-        a.search {
-            order: 2;
-        }
-        select[name="City"] {
-            order: 3;
-        }
-        select[name="Time"] {
-            order: 4;
-        }
-    }
-
-    ul.facts {
-        width: 70%;
-    }
-
-    .reviews .review {
-        width: 70%;
-    }
-
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 830px) {
+  footer > .wrapper {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
 
-    html {
-        font-size: 12px;
+    > * {
+      width: 40%;
     }
 
-    .main,
-    .statistics, .job-list,
-    div.pages, .candidates,
-    .signup, footer {
-        padding: 20px 5% !important;
+    .contact {
+      text-align: left;
     }
+  }
+}
 
-    .banner .main .wrap-search {
+@media (max-width: 700px) {
+  .banner header {
+    width: 80%;
 
-        input[type="text"],
-        select[name="City"],
-        select[name="Time"],
-        a.search {
-            width: 80%;
-        }
+    a.contact {
+      display: none;
     }
+  }
 
-    .reviews .review {
-        width: 80%;
+  .banner .main .wrap-search {
+    width: 90%;
+    input[type="text"],
+    select[name="City"],
+    select[name="Time"],
+    a.search {
+      width: 80%;
     }
+  }
+
+  .banner .statistics ul.facts {
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    li {
+      width: 40%;
+      margin: 15px;
+    }
+  }
+
+  .job-list .wrap-jobs .job {
+    text-align: left;
+    > .place,
+    .salary {
+      display: none;
+    }
+    > .info {
+      width: auto;
+    }
+  }
+
+  .signup .wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    > .wrap-text {
+      width: auto;
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .reviews .review {
+    width: 80%;
+  }
+
+  footer > .wrapper {
+    > * {
+      width: 90%;
+      margin: 1rem 0;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  div.pages {
+    flex-direction: column;
+    justify-content: space-between;
+
+    > ul.pages {
+      margin: 1rem 0;
+    }
+  }
 }

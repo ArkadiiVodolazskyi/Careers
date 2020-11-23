@@ -1,12 +1,4 @@
 @media (max-width: 1370px) {
-  .statistics,
-  .job-list,
-  div.pages,
-  .candidates,
-  .signup,
-  footer {
-    padding: 30px 7% !important;
-  }
   .banner header a.contact {
     margin-left: auto;
   }
@@ -17,7 +9,8 @@
     transition: all 0.5s ease;
     display: flex;
     flex-direction: column;
-    width: 150px;
+    width: 200px;
+    padding: 15px;
     height: 100vh;
     background-color: #1644ba;
     opacity: 0.8;
@@ -40,34 +33,23 @@
   .banner header ul.nav > li.hamburger {
     display: block;
     position: absolute;
-    left: -110px;
-    top: 10px;
+    right: 230px;
+    top: 25px;
   }
-  .banner .main .wrap-search input[type="text"] {
-    flex-grow: 2;
+  .job-list {
+    width: auto;
   }
-  .banner .main .wrap-search a.search {
-    flex-grow: 2;
-  }
-  .banner .main .wrap-search select[name="City"] {
-    flex-grow: 1;
-  }
-  .banner .main .wrap-search select[name="Time"] {
-    flex-grow: 1;
+  footer .wrapper {
+    width: auto;
+    justify-content: center;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   html {
     font-size: 14px;
   }
-  .main,
-  .statistics,
-  .job-list,
-  div.pages,
-  .candidates,
-  .signup,
-  footer {
-    padding: 40px 5% !important;
+  .wrapper {
+    width: 90%;
   }
   .banner .main .wrap-search {
     width: 70%;
@@ -77,40 +59,32 @@
   .banner .main .wrap-search select[name="City"],
   .banner .main .wrap-search select[name="Time"],
   .banner .main .wrap-search a.search {
-    width: 45% ;
+    width: 45%;
     margin: 5px;
   }
-  .banner .main .wrap-search input[type="text"] {
-    order: 1;
+}
+@media (max-width: 830px) {
+  footer > .wrapper {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
   }
-  .banner .main .wrap-search a.search {
-    order: 2;
+  footer > .wrapper > * {
+    width: 40%;
   }
-  .banner .main .wrap-search select[name="City"] {
-    order: 3;
-  }
-  .banner .main .wrap-search select[name="Time"] {
-    order: 4;
-  }
-  ul.facts {
-    width: 70%;
-  }
-  .reviews .review {
-    width: 70%;
+  footer > .wrapper .contact {
+    text-align: left;
   }
 }
-@media (max-width: 600px) {
-  html {
-    font-size: 12px;
+@media (max-width: 700px) {
+  .banner header {
+    width: 80%;
   }
-  .main,
-  .statistics,
-  .job-list,
-  div.pages,
-  .candidates,
-  .signup,
-  footer {
-    padding: 20px 5% !important;
+  .banner header a.contact {
+    display: none;
+  }
+  .banner .main .wrap-search {
+    width: 90%;
   }
   .banner .main .wrap-search input[type="text"],
   .banner .main .wrap-search select[name="City"],
@@ -118,7 +92,48 @@
   .banner .main .wrap-search a.search {
     width: 80%;
   }
+  .banner .statistics ul.facts {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .banner .statistics ul.facts li {
+    width: 40%;
+    margin: 15px;
+  }
+  .job-list .wrap-jobs .job {
+    text-align: left;
+  }
+  .job-list .wrap-jobs .job > .place,
+  .job-list .wrap-jobs .job .salary {
+    display: none;
+  }
+  .job-list .wrap-jobs .job > .info {
+    width: auto;
+  }
+  .signup .wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .signup .wrapper > .wrap-text {
+    width: auto;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
   .reviews .review {
     width: 80%;
+  }
+  footer > .wrapper > * {
+    width: 90%;
+    margin: 1rem 0;
+  }
+}
+@media (max-width: 400px) {
+  div.pages {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  div.pages > ul.pages {
+    margin: 1rem 0;
   }
 }

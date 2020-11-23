@@ -1,8 +1,13 @@
 html {
   font-size: 16px;
+  letter-spacing: 0.5px;
 }
 body {
   position: relative;
+}
+.wrapper {
+  width: 62vw;
+  margin: 0 auto;
 }
 h1,
 h2,
@@ -32,6 +37,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   background-image: url("../img/hero_1.jpg");
   background-position: center;
   background-size: cover;
@@ -39,12 +45,12 @@ a {
 }
 .banner header {
   height: 10vh;
+  margin: 0 auto;
+  width: 62vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  padding: 5px 20%;
 }
 .banner header ul.nav {
   font-size: 1.2rem;
@@ -60,7 +66,7 @@ a {
 .banner header ul.nav li.close,
 .banner header ul.nav li.hamburger {
   display: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .banner header ul.nav li a {
   padding: 0 10px;
@@ -95,9 +101,9 @@ a {
   opacity: 0.7;
 }
 .banner .main .wrap-search {
-  width: 80%;
+  width: 62vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-self: center;
 }
 .banner .main .wrap-search input[type="text"],
@@ -113,17 +119,20 @@ a {
   border-radius: 5px;
 }
 .banner .main .wrap-search a.search {
-  min-width: 125px;
   padding: 10px 12px;
   background-color: #1644ba;
   border-radius: 4px;
-  vertical-align: middle;
 }
 .banner .main .wrap-search a.search:hover {
   background-color: #3468ebc7;
 }
+.banner .main .wrap-search a.search span,
+.banner .main .wrap-search a.search svg {
+  opacity: 1;
+  vertical-align: middle;
+}
 .banner .statistics {
-  padding: 40px 20%;
+  padding: 3rem;
   text-align: center;
   background-color: rgba(22, 68, 186, 0.7);
   font-size: 1.2rem;
@@ -147,7 +156,8 @@ a {
   margin-bottom: 10px;
 }
 .job-list {
-  padding: 40px 20%;
+  width: 1200px;
+  margin: 5rem auto;
   text-align: center;
   font-size: 1.2rem;
 }
@@ -159,9 +169,10 @@ a {
 }
 .job-list .wrap-jobs {
   margin: 0 auto;
+  padding: 2rem;
 }
 .job-list .wrap-jobs .job {
-  padding: 25px 0;
+  padding: 2rem 0;
   border-bottom: 1px solid #ddd;
 }
 .job-list .wrap-jobs .job > * {
@@ -169,12 +180,16 @@ a {
   vertical-align: middle;
 }
 .job-list .wrap-jobs .job .wrap-logo {
-  width: 15%;
+  margin-right: 5%;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .job-list .wrap-jobs .job .wrap-logo {
+    display: block;
+  }
+}
 .job-list .wrap-jobs .job .wrap-logo img.logo {
-  max-width: 80px;
-  max-height: 80px;
+  width: 80px;
 }
 .job-list .wrap-jobs .job .info {
   width: 45%;
@@ -237,28 +252,34 @@ a {
   text-align: right;
 }
 .job-list div.pages {
-  padding: 40px 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
 .job-list div.pages * {
-  display: inline-block;
-  margin: 0 5px;
   color: #1644ba;
 }
 .job-list div.pages a {
-  padding: 5px 10px;
+  padding: 0.3rem 0.7rem;
   border: 1px solid #ddd;
-  border-radius: 7px;
   transition: all 0.2s ease;
 }
 .job-list div.pages a:hover {
   background-color: #1644ba;
   color: #fff;
 }
+.job-list div.pages > a {
+  border-radius: 5px;
+}
+.job-list div.pages ul.pages li {
+  display: inline-block;
+  margin: 0 0.4rem;
+}
 .job-list div.pages ul.pages li a {
-  width: 30px;
-  height: 30px;
+  display: inline-block;
   text-align: center;
   border-radius: 100%;
 }
@@ -298,7 +319,7 @@ a {
   text-transform: none;
 }
 .reviews .review {
-  width: 30%;
+  width: 500px;
   margin: 0 auto;
   text-align: center;
   font-style: italic;
@@ -344,75 +365,95 @@ a {
   background-color: #1644ba;
 }
 .signup {
+  padding: 3rem;
   background-color: #1644ba;
-  padding: 50px 20%;
-  font-size: 0;
 }
-.signup .wrap-text {
-  width: 60%;
-  display: inline-block;
-  font-size: 1.1rem;
-  vertical-align: middle;
-}
-.signup .wrap-text h2 {
-  margin-bottom: 15px;
-}
-.signup .wrap-btn {
-  width: 40%;
-  display: inline-block;
-  font-size: 1.1rem;
-  vertical-align: middle;
-  text-align: right;
-}
-.signup .wrap-btn a.signup-btn {
-  box-sizing: border-box;
-  padding: 15px 50px;
-  border-radius: 5px;
-  background-color: #fff568;
-  color: #000;
-  font-size: 1.2rem;
-}
-.signup .wrap-btn a.signup-btn:hover {
-  background-color: #fff9a1;
-}
-footer {
-  padding: 50px 20%;
-  padding-bottom: 20px;
-  background-color: #242424;
-  font-size: 1.1rem;
-}
-footer .wrap-blocks {
+.signup .wrapper {
   display: flex;
   justify-content: space-between;
 }
-footer .wrap-blocks h4 {
+.signup .wrap-text {
+  width: 70%;
+  font-size: 1.1rem;
+}
+.signup .wrap-text h2 {
+  margin-bottom: 1.2rem;
+}
+.signup a.signup-btn {
+  padding: 0.8rem 3rem;
+  border-radius: 5px;
+  background-color: #fff568;
+  color: #555;
+  font-size: 1.4rem;
+  align-self: center;
+  font-weight: 500;
+}
+.signup a.signup-btn:hover {
+  background-color: #fff9a1;
+}
+footer {
+  padding-bottom: 1rem;
+  background-color: #242424;
+  font-size: 1.1rem;
+}
+footer .wrapper {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 3rem 0;
+}
+footer .wrapper > * {
+  margin: 2rem;
+}
+footer .wrapper h4 {
   margin-bottom: 15px;
 }
-footer .wrap-blocks li {
+footer .wrapper li {
   margin: 20px 0;
 }
-footer .wrap-blocks li > a {
+footer .wrapper li > a {
   opacity: 0.6;
 }
-footer .wrap-blocks a.icon-social {
+footer .wrapper .contact {
+  text-align: center;
+}
+footer .wrapper .contact h4 {
+  text-align: left;
+}
+footer .wrapper .contact #myLogo {
   display: inline-block;
-  margin: 5px;
-  padding: 10px;
-  width: 35px;
-  height: 35px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+footer .wrapper a.icon-social {
+  display: inline-block;
+  margin: 0.4rem;
+  padding: 0.3rem 0.5rem;
+  text-align: center;
   background-color: #1644ba;
   border-radius: 100%;
 }
-footer .wrap-blocks a.icon-social:hover {
+footer .wrapper a.icon-social:hover {
   background-color: #fff;
   color: #1644ba;
 }
-footer .wrap-blocks a:hover {
+footer .wrapper a.icon-social svg {
+  width: 1rem;
+  height: 1rem;
+}
+footer .wrapper a:hover {
   opacity: 1;
 }
 footer .copyright {
-  margin-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
   text-align: center;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 footer .copyright .design {
   color: #1644ba;
@@ -422,6 +463,7 @@ footer .copyright .design:hover {
 }
 footer .copyright .code {
   color: #fff568;
+  position: relative;
 }
 footer .copyright .code:hover {
   color: #fff89b;
